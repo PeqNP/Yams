@@ -20,8 +20,8 @@ import Bionic
 private let cpow: (_: Double, _: Double) -> Double = Bionic.pow
 #else
 import CoreFoundation
-import Glibc
-private let cpow: (_: Double, _: Double) -> Double = Glibc.pow
+import Musl
+private let cpow: (_: Double, _: Double) -> Double = Musl.pow
 #endif
 
 public extension Node {
